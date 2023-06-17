@@ -4,4 +4,4 @@ During the course Mathematical methods in data science and signal processing I e
 
 The arXiv to the original article is [here](https://arxiv.org/abs/1409.2848)
 
-The final grade for this work was **94**.
+Final grade - 94
