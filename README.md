@@ -31,7 +31,7 @@ An improvement example can be seen below for the case where k=1:
 
 #### Add the image ####
 
-
+<img src = "Convergence Algorithms.png" width = "700">  
 
 
 Final grade - 94
