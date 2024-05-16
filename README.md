@@ -19,11 +19,17 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## Suggested Improvement
-The better optimization can be achieved by changing the constant decaying step size suggested in the article ($\eta$)
 
-## Results
-My suggested improvement compare to oja algorithm and vr_pca algorithm for mnist dataset where k=1 is given below:
+
+## Overview
+In the article, the authors implemented the algorithm vr_pca and compared it to power iterations and oja's algorithm and tested them on the mnist dataset. In my work I showed a major improvement in convergence compared to vr_pca and the other algorithms.
+
+## Suggested Improvement
+The better optimization can be achieved by changing the constant step size suggested in the article ($\eta$) to dynamicly decaying step size according to the following formula:
+\begin{equation}:
+  x=1
+\end{equation}
+
 
 #### Add the image ####
 
