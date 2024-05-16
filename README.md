@@ -4,13 +4,21 @@ During the course *Mathematical methods in data science and signal processing* I
 
 The arXiv to the original article is [here](https://arxiv.org/abs/1409.2848)
 
-# Suggested Improvement
+## Getting Started
+1. Clone the repository
+'''bash
+
+'''
+
+
+## Suggested Improvement
 The better optimization can be achieved by changing the constant decaying step size suggested in the article ($\eta$)
 
-# Results
+## Results
 My suggested improvement compare to oja algorithm and vr_pca algorithm for mnist dataset where k=1 is given below:
 
 #### Add the image ####
+
 
 
 
