@@ -29,9 +29,7 @@ The better optimization can be achieved by changing the constant step size sugge
 
 An improvement example can be seen below for the case where k=1:
 
-#### Add the image ####
-
-<img src = "Convergence Algorithms.png" width = "700">  
+<img src = "Convergence Algorithms.png" width = "400">  
 
 
 Final grade - 94
