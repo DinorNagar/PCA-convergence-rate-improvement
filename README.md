@@ -7,7 +7,7 @@ The arXiv to the original article is [here](https://arxiv.org/abs/1409.2848)
 ## Getting Started
 1. Clone the repository
 '''bash
-
+git clone https://github.com/DinorNagar/PCA-convergence-rate-improvement.git
 '''
 
 
