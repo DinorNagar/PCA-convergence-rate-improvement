@@ -30,7 +30,7 @@ The better optimization can be achieved by changing the constant step size sugge
 An improvement example can be seen below for the case where k=1:
 
 <p align="center">
-  <img src = "Convergence Algorithms.png" width = "400">  
+  <img src = "Convergence Algorithms.png" width = "600">  
 </p>
 
 
