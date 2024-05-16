@@ -25,11 +25,8 @@ python main.py
 In the article, the authors implemented the algorithm vr_pca and compared it to power iterations and oja's algorithm and tested them on the mnist dataset. In my work I showed a major improvement in convergence compared to vr_pca and the other algorithms.
 
 ## Suggested Improvement
-The better optimization can be achieved by changing the constant step size suggested in the article ($\eta$) to dynamicly decaying step size according to the following formula:
-\begin{equation}:
-  x=1
-\end{equation}
-
+The better optimization can be achieved by changing the constant step size suggested in the article ($\eta$) to dynamicly decaying step size according to the following formula: $\eta_{t} = \frac{\eta}{t}$ where $\eta$ is the constant step size and $t$ is the iteration number.\\
+An improvement example can be seen below for the case where k=1:
 
 #### Add the image ####
 
