@@ -10,6 +10,14 @@ The arXiv to the original article is [here](https://arxiv.org/abs/1409.2848)
 git clone https://github.com/DinorNagar/PCA-convergence-rate-improvement.git
 ```
 
+2. Install the requirements
+```bash
+pip install -r requirements.txt
+```
+3. Run the main script
+```bash
+python main.py
+```
 
 ## Suggested Improvement
 The better optimization can be achieved by changing the constant decaying step size suggested in the article ($\eta$)
