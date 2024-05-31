@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
-
+from tqdm import tqdm
 
 def oja_k(X, m, eta, k):
     d, n = X.shape
@@ -12,7 +12,7 @@ def oja_k(X, m, eta, k):
     w_t = w_t.astype(np.float64)
     error_vec = []
 
-    for s in range(25):
+    for s in tqdm(range(25), desc=f"Oja's algorithm using eta={eta}, k={k}"):
         count = 1
         w = w_t
         for t in range(1, m):
@@ -42,7 +42,7 @@ def vr_pca_k(X, m, eta, k):
     w_t = w_t.astype(np.float64)
 
     error_vec = []
-    for s in range(25):
+    for s in tqdm(range(25), desc=f"vr_pca algorithm"):
 
         u_t = np.matmul(X, np.matmul(X.T, w_t)) / n
         w = w_t
@@ -78,7 +78,7 @@ def power_iterations_k(X, eta, k):
     error_vec = []
     w_t = w_t.astype(np.float64)
 
-    for s in range(25):
+    for s in tqdm(range(25), desc=f"Power iteration algorithm"):
         w = w_t
 
         A = 1 / n * X.dot(X.T)
@@ -238,9 +238,32 @@ def create_graphs_for_iris_dataset():
 
 
 if __name__ == '__main__':
-    create_graphs_for_mnist_dataset_k(k=1)
-    create_graphs_for_mnist_dataset_k(k=6)
-    create_graphs_for_improved_algorithm()
-    create_graphs_for_iris_dataset()
+    print('\n######################################################################################################\n')
+    print("Please select a function to execute:")
+    print("1. Run a comparison between Oja, power iteration and vr_pca algorithms for k=1 on mnist dataset.")
+    print("2. Run a comparison between Oja, power iteration and vr_pca algorithms for k=6 on mnist dataset.")
+    print("3. Run the improved vr_pca algorithm on mnist dataset compared to Oja, power iteration and vr_pca.")
+    print("4. Run Oja, power iteration, vr_pca and the improved version of vr_pca on iris dataset.")
+    print('\n######################################################################################################\n')
+
+    while True:
+        try:
+            choice = int(input("Enter a number (1-4): "))
+            if 1 <= choice <= 4:
+                break
+            else:
+                print("Invalid input. Please enter a number between 1 and 4.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+    
+    if choice == 1:
+        create_graphs_for_mnist_dataset_k(k=1)
+    elif choice == 2:
+        create_graphs_for_mnist_dataset_k(k=6)
+    elif choice == 3:
+        create_graphs_for_improved_algorithm()
+    elif choice == 4:
+        create_graphs_for_iris_dataset()
+
 
     plt.show()
